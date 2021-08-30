@@ -3,12 +3,72 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    background: white;
-   
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 2px solid firebrick;
+    box-shadow: 1px 1px 10px black;
 }
+nav {
+    display: flex;
+}
+
+nav .fa-bars {
+    font-size: 28px;
+    color: firebrick;
+}
+
+nav ul {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0 15px;
+    color: firebrick;
+    font-weight: 900;
+}
+
+main {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+article {
+    max-width: 720px;
+}
+
+article h2 {
+    padding: 30px 0;
+    text-align: center;
+}
+
+article img {
+    display: block;
+    padding: 20px;
+    width: 100%;
+}
+
+article p {
+    text-align: justify;
+    padding: 20px;
+}
+
+article p a {
+    text-decoration: none;
+    color: firebrick;
+}
+
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
