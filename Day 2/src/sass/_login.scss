@@ -1,0 +1,41 @@
+.login {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    // background-color: rgb(51, 205, 172, 0.6);
+    border: 3px solid rgb(20, 90, 80);
+    box-shadow: inset 1px 1px 4px rgb(20, 90, 80);
+    position: relative;
+    top: 120px;
+    height: 500px;
+
+    input {
+        width: 80%;
+        line-height: 40px;
+        margin-bottom: 5px;
+        border: 2px solid rgb(20, 90, 80);
+
+        &[type="submit"] {
+            width: 40%;
+            background-color: rgb(20, 90, 80);
+            color: whitesmoke;
+            text-transform: uppercase;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(70, 200, 180);
+                color: rgb(20, 90, 80);
+            }
+        }
+    }
+
+    span {
+        display: block;
+        width: 80%;
+        text-align: right;
+    }
+
+}
