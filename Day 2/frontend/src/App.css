@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-.noTextDecoration {
-  text-decoration: none;
-  color: #145a50;
-}
-
 header {
   display: flex;
   flex-direction: row;
@@ -37,12 +32,51 @@ header nav ul li {
   font-weight: 900;
 }
 header nav ul li a {
-  background-color: yellowgreen;
+  text-decoration: none;
+  color: #145a50;
 }
 header nav ul li:hover .noTextDecoration {
   color: honeydew;
   text-shadow: 1px 1px 1px #33cdac, -1px -1px 1px #33cdac, 1px -1px 1px #33cdac, -1px 1px 1px #33cdac;
   cursor: pointer;
+}
+
+.addlink {
+  max-width: 500px;
+  margin: 0 auto;
+  border: 3px solid #145a50;
+  box-shadow: inset 1px 1px 4px #145a50;
+  position: relative;
+  top: 120px;
+}
+.addlink form {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.addlink form input {
+  width: 80%;
+  line-height: 40px;
+  margin-bottom: 5px;
+  border: 2px solid #145a50;
+}
+.addlink form input[type=submit] {
+  width: 40%;
+  background-color: #145a50;
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+.addlink form input[type=submit]:hover {
+  cursor: pointer;
+  background-color: #46c8b4;
+  color: #145a50;
+}
+.addlink form span {
+  display: block;
+  width: 80%;
+  text-align: right;
 }
 
 main {

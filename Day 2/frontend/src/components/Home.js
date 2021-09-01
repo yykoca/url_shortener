@@ -19,7 +19,7 @@ function Home({links}) {
                                 Get instant feedbackYour code is tested as soon as you submit it, so you always know if you're on the
                                 right track.
                                 Put your learning into practiceApply your learning with real-world projects and learn everything you
-                                need to take your career to the next level. Hier ist der Link zum <strong><a href="https://www.codecademy.com" target="_blank">Codecademy</a>.</strong>
+                                need to take your career to the next level. Hier ist der Link zum <strong><a href="https://www.codecademy.com" target="_blank" rel="noreferrer">Codecademy</a>.</strong>
                             </p>
                         </article>
                     )

@@ -27,7 +27,8 @@ header {
                 font-weight: 900;
                 
                 a {
-                    background-color: yellowgreen;
+                    text-decoration: none;
+                    color: rgb(20, 90, 80);
                 }
 
                 &:hover .noTextDecoration{
