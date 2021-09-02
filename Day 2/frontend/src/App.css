@@ -145,7 +145,10 @@ main article p a {
 }
 
 @media screen and (max-width: 720px) {
-  header nav ul {
+  header nav ul li {
+    display: inline;
+  }
+  header nav ul li:not(:first-child) {
     display: none;
   }
 }

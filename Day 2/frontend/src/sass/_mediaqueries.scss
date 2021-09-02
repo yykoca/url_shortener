@@ -2,14 +2,26 @@
     header {
         nav {
             ul {
-                display: none;
+                li {
+                    display: inline;
+
+                    &:not(:first-child) {
+
+                        display: none;
+                    }
+
+                }
+
             }
         }
     }
 }
 
 @media screen and (min-width: 721px) {
-    nav .fa-bars {
-        display: none;
+    nav {
+
+        .fa-bars {
+            display: none;
+        }
     }
 }
