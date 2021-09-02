@@ -3,8 +3,8 @@ import { Redirect } from "react-router-dom";
 
 function AddLink({ links, setLinks }) {
     const [title, setTitle] = useState("");
-    const [beschreibung, setBeschreibung] = useState("https://cdn.pixabay.com/photo/2021/08/25/07/23/nature-6572635_960_720.jpg");
-    const [link, setLink] = useState("");
+    const [beschreibung, setBeschreibung] = useState("");
+    const [link, setLink] = useState("https://cdn.pixabay.com/photo/2021/08/25/07/23/nature-6572635_960_720.jpg");
 
     function submitForm(e) {
         e.preventDefault();
