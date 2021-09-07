@@ -1,7 +1,7 @@
 header {
     display: flex;
     flex-direction: row;
-    height: 10vh;
+    min-height: 10vh;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
@@ -10,8 +10,11 @@ header {
     
     nav {
         display: flex;
-        
         .fa-bars {
+            font-size: 28px;
+            color: firebrick;
+        }
+        .fa-times {
             font-size: 28px;
             color: firebrick;
         }
@@ -31,10 +34,10 @@ header {
                     color: rgb(20, 90, 80);
                 }
 
-                &:hover .noTextDecoration{
-                    color: honeydew;
-                    text-shadow: 1px 1px 1px rgb(51, 205, 172), -1px -1px 1px rgb(51, 205, 172), 1px -1px 1px rgb(51, 205, 172), -1px 1px 1px rgb(51, 205, 172);
-                    cursor: pointer;
+                &:hover a {
+                        color: honeydew;
+                        text-shadow: 1px 1px 1px rgb(51, 205, 172), -1px -1px 1px rgb(51, 205, 172), 1px -1px 1px rgb(51, 205, 172), -1px 1px 1px rgb(51, 205, 172);
+                        cursor: pointer;
                 }
             }
         }

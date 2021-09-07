@@ -1,7 +1,24 @@
 @media screen and (max-width:720px) {
     header {
+        display: flex;
+        align-items: flex-start;
         nav {
             ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-end;
+                min-width: 50vw;
+                li {
+                    line-height: 40px;
+                }
+            }
+            i {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .active {
                 display: none;
             }
         }
@@ -9,7 +26,12 @@
 }
 
 @media screen and (min-width: 721px) {
-    nav .fa-bars {
-        display: none;
+    nav {
+        .fa-bars {
+            display: none;
+        }
+        .fa-times {
+            display: none;
+        }
     }
 }
