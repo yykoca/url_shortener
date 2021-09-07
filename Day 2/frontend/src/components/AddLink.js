@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 
-
-
 function AddLink({ links, setLinks }) {
     let history = useHistory();
     const [title, setTitle] = useState("");

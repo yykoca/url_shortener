@@ -16,8 +16,13 @@ header {
 }
 header nav {
   display: flex;
+  background-color: blanchedalmond;
 }
 header nav .fa-bars {
+  font-size: 28px;
+  color: firebrick;
+}
+header nav .fa-times {
   font-size: 28px;
   color: firebrick;
 }
@@ -36,7 +41,7 @@ header nav ul li a {
   text-decoration: none;
   color: #145a50;
 }
-header nav ul li:hover .noTextDecoration {
+header nav ul li:hover a {
   color: honeydew;
   text-shadow: 1px 1px 1px #33cdac, -1px -1px 1px #33cdac, 1px -1px 1px #33cdac, -1px 1px 1px #33cdac;
   cursor: pointer;
@@ -146,10 +151,30 @@ main article p a {
 }
 
 @media screen and (max-width: 720px) {
+  header {
+    display: flex;
+    align-items: flex-start;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    min-width: 50vw;
+  }
   header nav ul li {
-    display: inline;
+    line-height: 40px;
+  }
+  header nav i:hover {
+    cursor: pointer;
+  }
+  header nav .active {
+    display: none;
   }
   header nav ul li:not(:first-child) {
+    display: none;
+  }
+  nav .fa-times {
     display: none;
   }
 }
