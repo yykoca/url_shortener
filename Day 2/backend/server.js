@@ -1,15 +1,19 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const express = require('express');
+const database = require('./lib/database.js');
+const linksRouter = require('./routers/links.js');
+
+database.init();
 
 const server = express();
 
-
-server.listen(3434, ()=> {
-    console.log("server listening");
+server.listen(process.env.PORT, ()=> {
+    console.log(`server listening on port ${process.env.PORT}`);
 })
 
+server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
-server.get("/links", (req,res)=> {
-    const links = '[{"title":"12","beschreibung":"https://cdn.pixabay.com/photo/2021/08/25/07/23/nature-6572635_960_720.jpg","link":"123123"},{"title":"12323123","beschreibung":"https://cdn.pixabay.com/photo/2021/08/25/07/23/nature-6572635_960_720.jpg","link":"124124"}]'
-    res.send(links);
-})
+
+server.use("/links", linksRouter);
