@@ -1,16 +1,15 @@
 import React from 'react';
 import codecademy from '../images/codecademy.png';
 
-function Home() {
-    const array = [1, 2, 3, 4, 5]
+function Home({links}) {
     return (
         <main>
             {
-                array.map(item => {
+                links.map(item => {
                     return (
                         <article key={item}>
-                            <h2>It's time to start investing in yourself</h2>
-                            <img src={codecademy} alt=""></img>
+                            <h2>{item.title}</h2>
+                            <img src={item.link} alt=""></img>
                             <p><em>Learn to Code - for Free</em><br />
                                 How it worksFirst, we invented the best system for learning to code.Ten years and 50 million learners
                                 later, we've perfected it.
