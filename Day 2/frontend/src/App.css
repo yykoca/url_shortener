@@ -30,6 +30,7 @@ header nav ul {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 header nav ul li {
   list-style-type: none;
@@ -170,9 +171,7 @@ main article p a {
   header nav .active {
     display: none;
   }
-}
-@media screen and (min-width: 721px) {
-  nav .fa-bars {
+  header nav ul li:not(:first-child) {
     display: none;
   }
   nav .fa-times {

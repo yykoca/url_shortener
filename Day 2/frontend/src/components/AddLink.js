@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-// import { Redirect } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 function AddLink({ links, setLinks }) {
+    let history = useHistory();
     const [title, setTitle] = useState("");
     const [beschreibung, setBeschreibung] = useState("");
     const [link, setLink] = useState("https://cdn.pixabay.com/photo/2021/08/25/07/23/nature-6572635_960_720.jpg");
@@ -17,7 +18,7 @@ function AddLink({ links, setLinks }) {
         setTitle("");
         setBeschreibung("");
         setLink("");
-        // <Redirect to="/" />
+         history.push("/");
     }
     return (
         <div className="addlink">
@@ -26,9 +27,10 @@ function AddLink({ links, setLinks }) {
                 <input type="text" placeholder="Beschreibung" value={beschreibung} onChange={(e) => { setBeschreibung(e.target.value) }}></input>
                 <input type="text" placeholder="Link" value={link} onChange={(e) => { setLink(e.target.value) }}></input>
                 <input type="submit" value="Add"></input>
+                
             </form>
         </div>
-    )
+    );
 }
 
-export default AddLink
+export default AddLink;

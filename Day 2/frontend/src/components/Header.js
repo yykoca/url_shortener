@@ -3,11 +3,14 @@ import {
     BrowserRouter as Router,
     Link
 } from "react-router-dom";
-
-
 import logo from '../images/url-shortener-logo.svg'
 
-function Header() {
+
+export default function Header() {
+    const [toggleMenu, setToggleMenu] = useState(false)
+    const toggleNav = () => {
+        setToggleMenu(!toggleMenu)
+    }
     return (
         <Router>
             <header>
@@ -15,13 +18,18 @@ function Header() {
                     <img src={logo} alt="logo" />
                 </section>
                 <nav>
-                    <ul>
+                   
+                        <ul className= {
+                            toggleMenu ? 'mobile' : 'desktop'
+                        } >
+                        
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                         <li><Link to="/about">About</Link></li>
                         <li><Link to="/login">Login</Link></li>
                     </ul>
-                    <i class="fas fa-bars"></i>
+                    
+                    <i onClick={toggleNav} className="fas fa-bars"></i>
                 </nav>
             </header>
         </Router>
