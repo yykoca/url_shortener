@@ -1,21 +1,17 @@
 @media screen and (max-width:720px) {
     header {
-        display: flex;
         align-items: flex-start;
         nav {
             ul {
-                display: flex;
                 flex-direction: column;
-                justify-content: space-around;
                 align-items: flex-end;
                 min-width: 50vw;
                 li {
                     line-height: 40px;
-                    display: inline;
-
-                    &:not(:first-child) {
-                        display: none;
-                    }
+                    
+                    // &:not(:first-child) {
+                    //     display: none;
+                    // }
                 }
             }
             i {

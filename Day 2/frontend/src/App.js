@@ -47,12 +47,12 @@ function App() {
           <img src={logo} alt="logo" />
         </section>
         <nav>
-          <ul className={active ? "active" : ""}>
+          <ul >
             <li><Link to="/add" >+</Link></li>
-            <li><Link to="/" >Home</Link></li>
-            <li><Link to="/contact" >Contact</Link></li>
-            <li><Link to="/about" >About</Link></li>
-            <li><Link to="/login" >Login</Link></li>
+            <li className={active ? "active" : ""}><Link to="/" >Home</Link></li>
+            <li className={active ? "active" : ""}><Link to="/contact" >Contact</Link></li>
+            <li className={active ? "active" : ""}><Link to="/about" >About</Link></li>
+            <li className={active ? "active" : ""}><Link to="/login" >Login</Link></li>
           </ul>
           {/* <i className={active ? "fas fa-bars" : "fas fa-bars active"}></i> */}
           <i className={`fas fa-bars ${active ? "" : "active"}`} onClick={setActiveFunc}></i>

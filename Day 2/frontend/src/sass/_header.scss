@@ -10,20 +10,11 @@ header {
     
     nav {
         display: flex;
-        .fa-bars {
-            font-size: 28px;
-            color: firebrick;
-        }
-        .fa-times {
-            font-size: 28px;
-            color: firebrick;
-        }
-        
         ul {
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             display: flex;
             align-items: center;
-            flex-direction: column;
+            flex-direction: row;
             
             li {
                 list-style-type: none;
@@ -41,6 +32,14 @@ header {
                         cursor: pointer;
                 }
             }
+        }
+        .fa-bars {
+            font-size: 28px;
+            color: firebrick;
+        }
+        .fa-times {
+            font-size: 28px;
+            color: firebrick;
         }
     }
 }
