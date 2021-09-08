@@ -1,10 +1,9 @@
-const Link = require('../models/Link.js');
+import Link from '../models/Link.js';
 
-module.exports = {
+export default {
     readOne: async function (req, res, next) {
         try {
             const links = await Link.readOne(req.body.id);
-            console.log("links", links);
             res.json(links);
         } catch (error) {
             next(error);
@@ -13,7 +12,6 @@ module.exports = {
     readAll: async function (req, res, next) {
         try {
             const links = await Link.readAll();
-            console.log("links", links);
             res.json(links);
         } catch (error) {
             next(error);
