@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const LinkSchema = mongoose.Schema({
     title: {
@@ -44,6 +44,6 @@ async function deleteOne(id) {
 }
 
 
-module.exports = {
+export default {
 	register, readOne, readAll, updateOne, deleteOne
 };
