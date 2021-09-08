@@ -14,11 +14,16 @@
                     // }
                 }
             }
-            i {
-                &:hover {
-                    cursor: pointer;
-                }
+
+            #nav-icon {
+                top: 5px;
             }
+
+            // i {
+            //     &:hover {
+            //         cursor: pointer;
+            //     }
+            // }
             .active {
                 display: none;
             }
@@ -28,11 +33,14 @@
 
 @media screen and (min-width: 721px) {
     nav {
-        .fa-bars {
+        #nav-icon {
             display: none;
         }
-        .fa-times {
-            display: none;
-        }
+        // .fa-bars {
+        //     display: none;
+        // }
+        // .fa-times {
+        //     display: none;
+        // }
     }
 }

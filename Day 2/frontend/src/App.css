@@ -27,6 +27,7 @@ header nav ul li {
   list-style-type: none;
   margin: 0 15px;
   font-weight: 900;
+  transition: all 7s ease-in-out;
 }
 header nav ul li a {
   text-decoration: none;
@@ -36,6 +37,69 @@ header nav ul li:hover a {
   color: honeydew;
   text-shadow: 1px 1px 1px #33cdac, -1px -1px 1px #33cdac, 1px -1px 1px #33cdac, -1px 1px 1px #33cdac;
   cursor: pointer;
+}
+header nav #nav-icon {
+  width: 30px;
+  position: relative;
+  margin: 0px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+header nav #nav-icon.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+header nav #nav-icon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+header nav #nav-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+header nav #nav-icon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+header nav #nav-icon span {
+  display: block;
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  background: firebrick;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+header nav #nav-icon span:nth-child(1) {
+  top: 0px;
+}
+header nav #nav-icon span:nth-child(2), header nav #nav-icon span:nth-child(3) {
+  top: 12px;
+}
+header nav #nav-icon span:nth-child(4) {
+  top: 24px;
 }
 header nav .fa-bars {
   font-size: 28px;
@@ -161,18 +225,15 @@ main article p a {
   header nav ul li {
     line-height: 40px;
   }
-  header nav i:hover {
-    cursor: pointer;
+  header nav #nav-icon {
+    top: 5px;
   }
   header nav .active {
     display: none;
   }
 }
 @media screen and (min-width: 721px) {
-  nav .fa-bars {
-    display: none;
-  }
-  nav .fa-times {
+  nav #nav-icon {
     display: none;
   }
 }
