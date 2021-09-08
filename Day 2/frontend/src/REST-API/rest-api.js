@@ -1,14 +1,19 @@
 async function fetchDataFromLocalServer() {
 
     const url = 'http://localhost:3345/links'
-
-    let links = [];
-
-    links = await fetch(url)
+    // const options = {
+    //     method: "GET",
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //         'Accept': 'application/json'
+    //     }
+    // }
+    return await fetch(url)
         .then(response => response.json())
-        .then(data => data);
-
-    return links
+        .then(data => {
+            console.log("hier ist fetch data")
+            return data
+        });
 }
 
 const restapi = { fetchDataFromLocalServer };
