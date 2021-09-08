@@ -13,16 +13,18 @@ import Contact from './components/Contact';
 import About from './components/About';
 import Login from './components/Login';
 import NotFound from './components/NotFound';
-import restapi from './REST-API/rest-api.js'
-
+import restapi from './REST-API/rest-api.js';
 import logo from './images/url-shortener-logo.svg';
 
 
 function App() {
-  const [links, setLinks] = useState(() => {
-    const localData = localStorage.getItem('links');
-    return localData ? JSON.parse(localData) : [];
-  })
+  // const [links, setLinks] = useState(() => {
+    // const localData = localStorage.getItem('links');
+    // return localData ? JSON.parse(localData) : [];
+    // const data = restapi.fetchDataFromLocalServer();
+  //   return []
+  // })
+  const [links, setLinks] = useState([]);
 
   const [active, setActive] = useState(true);
   const [screenWidth, setScreenWidth] = useState()
@@ -31,14 +33,16 @@ function App() {
   }
 
   useEffect(() => {
-    
+
   }, [screenWidth])
 
   useEffect(() => {
-    localStorage.setItem('links', JSON.stringify(links))
-    restapi.fetchDataFromLocalServer().then(data => console.log("hier", data));
-  }, [links])
-
+    // localStorage.setItem('links', JSON.stringify(links))
+    restapi.fetchDataFromLocalServer()
+      .then(data => {
+        setLinks(data)
+      });
+  }, [])
 
   return (
     <Router>
@@ -55,9 +59,15 @@ function App() {
             <li className={active ? "active" : ""}><Link to="/login" >Login</Link></li>
           </ul>
           {/* <i className={active ? "fas fa-bars" : "fas fa-bars active"}></i> */}
-          <i className={`fas fa-bars ${active ? "" : "active"}`} onClick={setActiveFunc}></i>
+          {/* <i className={`fas fa-bars ${active ? "" : "active"}`} onClick={setActiveFunc}></i> */}
           {/* <i className={active ? "fas fa-times active" : "fas fa-times"}></i> */}
-          <i className={`fas fa-times ${active ? "active" : ""}`} onClick={setActiveFunc}></i>
+          {/* <i className={`fas fa-times ${active ? "active" : ""}`} onClick={setActiveFunc}></i> */}
+          <div id="nav-icon" className={`${active ? "" : "open"}`} onClick={setActiveFunc}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
       </header>
       <Switch>
