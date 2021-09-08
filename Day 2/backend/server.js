@@ -1,17 +1,19 @@
-const dotenv = require('dotenv');
-dotenv.config();
-const express = require('express');
-const database = require('./lib/database.js');
-const linksRouter = require('./routers/links.js');
+import dotenv from 'dotenv';
+import express from 'express';
+import {init} from './lib/database.js';
+import linksRouter from './routers/links.js';
+import cors from 'cors';
 
-database.init();
+dotenv.config();
+
+init();
 
 const server = express();
 
 server.listen(process.env.PORT, ()=> {
     console.log(`server listening on port ${process.env.PORT}`);
 })
-
+server.use(cors());
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
