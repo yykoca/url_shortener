@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import {init} from './lib/database.js';
 import linksRouter from './routers/links.js';
+import usersRouter from './routers/users.js';
 import cors from 'cors';
 
 dotenv.config();
@@ -19,3 +20,4 @@ server.use(express.urlencoded({ extended: true }));
 
 
 server.use("/links", linksRouter);
+server.use("/users", usersRouter);
