@@ -18,7 +18,7 @@ function AddLink({ links, setLinks }) {
         setTitle("");
         setBeschreibung("");
         setLink("");
-         history.push("/");
+        history.push("/");
     }
     return (
         <div className="addlink">
@@ -27,7 +27,6 @@ function AddLink({ links, setLinks }) {
                 <input type="text" placeholder="Beschreibung" value={beschreibung} onChange={(e) => { setBeschreibung(e.target.value) }}></input>
                 <input type="text" placeholder="Link" value={link} onChange={(e) => { setLink(e.target.value) }}></input>
                 <input type="submit" value="Add"></input>
-                
             </form>
         </div>
     );
